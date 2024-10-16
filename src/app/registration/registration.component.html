@@ -1,0 +1,61 @@
+<!-- registration.component.html -->
+
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <!-- Role Selection -->
+  <div>
+    <label for="role">Role</label>
+    <select formControlName="role" (change)="onRoleChange()">
+      <option value="Student">Student</option>
+      <option value="Trainer">Trainer</option>
+    </select>
+  </div>
+
+  <!-- Common Fields: First Name and Last Name -->
+  <div>
+    <label for="firstName">First Name</label>
+    <input id="firstName" formControlName="firstName" type="text" placeholder="Enter First Name" />
+    <div *ngIf="submitted && registrationForm.get('firstName')?.errors?.['required']" class="error">
+      First Name is required.
+    </div>
+  </div>
+
+  <div>
+    <label for="lastName">Last Name</label>
+    <input id="lastName" formControlName="lastName" type="text" placeholder="Enter Last Name" />
+    <div *ngIf="submitted && registrationForm.get('lastName')?.errors?.['required']" class="error">
+      Last Name is required.
+    </div>
+  </div>
+
+  <!-- Conditional Fields Based on Role Selection -->
+  <div *ngIf="isStudent">
+    <!-- Date of Birth (Student Only) -->
+    <label for="dob">Date of Birth</label>
+    <input id="dob" formControlName="dob" type="date" placeholder="Enter Date of Birth" />
+  </div>
+
+  <div *ngIf="isStudent">
+    <!-- Address (Student Only) -->
+    <label for="address">Address</label>
+    <input id="address" formControlName="address" type="text" placeholder="Enter Address" />
+  </div>
+
+  <div *ngIf="isTrainer">
+    <!-- Specialization (Trainer Only) -->
+    <label for="specialization">Specialization</label>
+    <input id="specialization" formControlName="specialization" type="text" placeholder="Enter Specialization" />
+    <div *ngIf="submitted && registrationForm.get('specialization')?.errors?.['required']" class="error">
+      Specialization is required.
+    </div>
+  </div>
+
+  <!-- Submit Button -->
+  <button type="submit">Submit</button>
+</form>
+
+<!-- Display Generated Credentials After Successful Registration -->
+<div *ngIf="showCredentials">
+  <h3>Registration Successful!</h3>
+  <p><strong>Username:</strong> {{ generatedUsername }}</p>
+  <p><strong>Password:</strong> {{ generatedPassword }}</p>
+</div>

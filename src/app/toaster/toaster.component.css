@@ -1,0 +1,21 @@
+/* toaster.component.css */
+.toaster-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px;
+  }
+  
+  button {
+    background-color: #6C63FF;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #5149d3;
+  }
+  

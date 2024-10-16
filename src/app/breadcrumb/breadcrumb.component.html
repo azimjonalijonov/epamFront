@@ -1,0 +1,14 @@
+<nav class="breadcrumb-container">
+    <ul class="breadcrumb">
+      <li *ngFor="let breadcrumb of breadcrumbs; let last = last">
+        <ng-container *ngIf="!last">
+          <a [routerLink]="breadcrumb.url">{{ breadcrumb.name }}</a>
+          <span class="separator">/</span>
+        </ng-container>
+        <ng-container *ngIf="last">
+          <span>{{ breadcrumb.name }}</span>
+        </ng-container>
+      </li>
+    </ul>
+  </nav>
+  

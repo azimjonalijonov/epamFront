@@ -1,0 +1,94 @@
+/* navigation.component.css */
+
+/* Basic Styling for Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #6C63FF;
+    color: white;
+    position: relative;
+  }
+  
+  .logo a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  .nav-items {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-items li {
+    padding: 10px;
+  }
+  
+  .nav-items li.active a {
+    color: #ffcc00;
+  }
+  
+  .nav-items li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .mobile-menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Mobile Navigation */
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: #6C63FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: left 0.3s ease;
+  }
+  
+  .mobile-nav.open {
+    left: 0;
+  }
+  
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .mobile-nav ul li {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .mobile-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .mobile-nav ul li.active a {
+    color: #ffcc00;
+  }
+  
+  /* Responsive Design for Mobile */
+  @media screen and (max-width: 600px) {
+    .nav-items {
+      display: none;
+    }
+  
+    .mobile-menu-toggle {
+      display: block;
+    }
+  }
+  

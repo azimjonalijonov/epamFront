@@ -1,0 +1,23 @@
+<div class="mini-profile">
+    <div class="profile-header" (click)="toggleProfileMenu()">
+      <img src="assets/profile-avatar.png" alt="Profile Picture" class="profile-avatar">
+      <div class="profile-info">
+        <h3>{{userName}}</h3>
+        <p>{{userEmail}}</p>
+      </div>
+    </div>
+  
+    <div *ngIf="menuOpen" class="profile-menu">
+      <a routerLink="/my-account" class="menu-item">
+        <i class="icon-account"></i> My Account
+      </a>
+      <div class="menu-item night-mode">
+        <i class="icon-night"></i> Night mode
+        <mat-slide-toggle [(ngModel)]="nightMode" (change)="toggleNightMode()"></mat-slide-toggle>
+      </div>
+      <a (click)="signOut()" class="menu-item">
+        <i class="icon-signout"></i> Sign out
+      </a>
+    </div>
+  </div>
+  

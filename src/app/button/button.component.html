@@ -1,0 +1,13 @@
+<!-- button.component.html -->
+
+<button 
+  [ngClass]="type" 
+  [disabled]="disabled"
+  (click)="onButtonClick()">
+  
+  <!-- Icon (optional) -->
+  <i *ngIf="icon" [class]="icon"></i>
+
+  <!-- Button Text -->
+  {{ text }}
+</button>

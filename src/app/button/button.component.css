@@ -1,0 +1,33 @@
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button.standard {
+    background-color: #6C63FF;
+    color: white;
+  }
+  
+  button.hover:hover {
+    background-color: #5149d3;
+  }
+  
+  button.pressed:active {
+    background-color: #3e36aa;
+  }
+  
+  button.disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+  
+  button i {
+    margin-right: 8px;
+  }
+  
