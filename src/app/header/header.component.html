@@ -1,19 +1,37 @@
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">My App</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Register</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">My App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/my-account" routerLinkActive="active">My Account</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/registration" routerLinkActive="active">Registration</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/join-us" routerLinkActive="active">Join us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/breadcrumb" routerLinkActive="active">Breadcrumb</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/button" routerLinkActive="active">Button</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/date-picker" routerLinkActive="active">Date Picker</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/table" routerLinkActive="active">Table</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

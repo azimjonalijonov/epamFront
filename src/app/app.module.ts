@@ -25,7 +25,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalBoxComponent } from './modal-box/modal-box.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { MiniProfileComponent } from './mini-profile/mini-profile.component';
-
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
+import { JoinUsComponent } from './join-us/join-us.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { RegistrationVerificationComponent } from './registration-verification/registration-verification.component';
+ 
 
 @NgModule({
   declarations: [
@@ -41,9 +46,14 @@ import { MiniProfileComponent } from './mini-profile/mini-profile.component';
     BreadcrumbComponent,
     ModalBoxComponent,
     DatePickerComponent,
-    MiniProfileComponent
+    MiniProfileComponent,
+    HomeComponent,
+    JoinUsComponent,
+    ChangePasswordComponent,
+    RegistrationVerificationComponent
   ],
   imports: [
+    AppRoutingModule,
     RouterModule,
     BrowserModule,
     ReactiveFormsModule,

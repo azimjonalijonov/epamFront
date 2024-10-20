@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-registration',
@@ -15,7 +16,7 @@ export class RegistrationComponent {
   generatedUsername = '';
   generatedPassword = '';
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,private auth: AuthService ) {
     this.registrationForm = this.fb.group({
       role: ['Student'],
       firstName: ['', Validators.required],
@@ -53,7 +54,7 @@ export class RegistrationComponent {
 
     this.generatedUsername = `${this.registrationForm.value.firstName.toLowerCase()}_user`;
     this.generatedPassword = 'generatedPassword123';
-
+    this.auth.registerUser(this.generatedUsername, this.generatedPassword);
     this.showCredentials = true;
   }
 }

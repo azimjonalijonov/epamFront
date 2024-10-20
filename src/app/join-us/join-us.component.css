@@ -1,0 +1,63 @@
+/* Container styling */
+.join-us-box {
+    border: 1px solid #000;
+    padding: 20px;
+    background-color: #f9f9f9;
+    height: 100%;
+  }
+  
+  /* Left Section */
+  .join-us-title {
+    border-right: 1px solid #000;
+    padding-right: 15px;
+  }
+  
+  .join-us-title h4 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Middle Section */
+  .join-us-content {
+    text-align: center;
+  }
+  
+  .join-us-content img {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .join-us-text h3 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .join-us-text p {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Button styling */
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  /* Right Section */
+  .join-us-instructions {
+    padding-left: 15px;
+  }
+  
+  .join-us-instructions p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .join-us-instructions ul {
+    padding-left: 20px;
+  }
+  
+  .join-us-instructions ul li {
+    list-style-type: disc;
+  }
+  

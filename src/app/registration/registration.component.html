@@ -10,8 +10,7 @@
     </select>
   </div>
 
-  <!-- Common Fields: First Name and Last Name -->
-  <div>
+   <div>
     <label for="firstName">First Name</label>
     <input id="firstName" formControlName="firstName" type="text" placeholder="Enter First Name" />
     <div *ngIf="submitted && registrationForm.get('firstName')?.errors?.['required']" class="error">
@@ -27,8 +26,7 @@
     </div>
   </div>
 
-  <!-- Conditional Fields Based on Role Selection -->
-  <div *ngIf="isStudent">
+   <div *ngIf="isStudent">
     <!-- Date of Birth (Student Only) -->
     <label for="dob">Date of Birth</label>
     <input id="dob" formControlName="dob" type="date" placeholder="Enter Date of Birth" />

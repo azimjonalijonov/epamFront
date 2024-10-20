@@ -6,24 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent {
-  isMobileNavOpen: boolean = false;  // To toggle mobile nav visibility
+  isMobileNavOpen: boolean = false;   
 
-  // Hardcoded navigation items
-  navItems = [
+   navItems = [
     { name: 'Home', path: '/home', isActive: true },
     { name: 'About', path: '/about', isActive: false },
     { name: 'Services', path: '/services', isActive: false },
     { name: 'Contact', path: '/contact', isActive: false }
   ];
 
-  // Toggle mobile navigation open/close
-  toggleMobileNav() {
+   toggleMobileNav() {
     this.isMobileNavOpen = !this.isMobileNavOpen;
   }
 
-  // Set active state on navigation item click
-  setActive(item: any) {
+   setActive(item: any) {
     this.navItems.forEach(i => i.isActive = false);
     item.isActive = true;
   }
 }
+  

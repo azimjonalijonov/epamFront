@@ -1,0 +1,37 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background color */
+  }
+  
+  .welcome-message {
+    margin-bottom: 20px;
+  }
+  
+  .welcome-message h1 {
+    font-size: 2.5rem; /* Large title */
+    color: #343a40; /* Dark color */
+  }
+  
+  .welcome-message p {
+    font-size: 1.25rem; /* Medium description */
+    color: #6c757d; /* Grey color */
+    margin-bottom: 20px;
+  }
+  
+  .image-section {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image-section img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
