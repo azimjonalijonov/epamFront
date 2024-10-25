@@ -1,0 +1,33 @@
+<div class="student-log">
+    <h2>Training Log for Students</h2>
+  
+    <form (ngSubmit)="onSearch()">
+      <div>
+        <label for="trainer">Search by Trainer Name:</label>
+        <input type="text" id="trainer" [(ngModel)]="searchTrainer" name="trainer">
+      </div>
+      <div>
+        <label for="specialization">Search by Specialization:</label>
+        <select [(ngModel)]="searchSpecialization" name="specialization">
+          <option *ngFor="let spec of specializations" [value]="spec">{{spec}}</option>
+        </select>
+      </div>
+      <div>
+        <label for="fromDate">From Date:</label>
+        <input type="date" id="fromDate" [(ngModel)]="fromDate" name="fromDate">
+      </div>
+      <div>
+        <label for="toDate">To Date:</label>
+        <input type="date" id="toDate" [(ngModel)]="toDate" name="toDate">
+      </div>
+      <button type="submit">Search</button>
+    </form>
+  
+    <h3>Training List</h3>
+    <ul>
+      <li *ngFor="let training of trainings">
+        {{ training.date }} - {{ training.name }} - {{ training.type }} - {{ training.duration }}
+      </li>
+    </ul>
+  </div>
+  

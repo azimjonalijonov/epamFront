@@ -30,6 +30,8 @@ import { HomeComponent } from './home/home.component';
 import { JoinUsComponent } from './join-us/join-us.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { RegistrationVerificationComponent } from './registration-verification/registration-verification.component';
+import { TrainingLogStudentComponent } from './training-log-student/training-log-student.component';
+import { TrainingLogTrainerComponent } from './training-log-trainer/training-log-trainer.component';
  
 
 @NgModule({
@@ -50,7 +52,9 @@ import { RegistrationVerificationComponent } from './registration-verification/r
     HomeComponent,
     JoinUsComponent,
     ChangePasswordComponent,
-    RegistrationVerificationComponent
+    RegistrationVerificationComponent,
+    TrainingLogStudentComponent,
+    TrainingLogTrainerComponent
   ],
   imports: [
     AppRoutingModule,

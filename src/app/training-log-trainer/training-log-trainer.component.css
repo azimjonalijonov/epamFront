@@ -1,0 +1,35 @@
+.trainer-log {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .trainer-log form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .trainer-log form div {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .trainer-log h3 {
+    margin-top: 20px;
+  }
+  
+  .trainer-log ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .trainer-log li {
+    background-color: #f0f0f5;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
