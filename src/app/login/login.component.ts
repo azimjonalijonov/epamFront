@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-login',
@@ -14,7 +16,8 @@ export class LoginComponent {
   passwordVisible = false;
   loginFailed =false;
 
-  constructor(private formBuilder: FormBuilder, private userService: AuthService,private router: Router) {
+  constructor(private formBuilder: FormBuilder, private userService: AuthService,private router: Router, private http: HttpClient
+  ) {
     this.signInForm = this.formBuilder.group({
       username: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
@@ -29,15 +32,25 @@ export class LoginComponent {
     // if (this.signInForm.invalid) {
     //   alert('Login failed!');
     // }
-    const username = this.signInForm.value.username;
-    const password = this.signInForm.value.password;
-    if (this.userService.login(username, password)) {
-      alert('Login successful!');
-      this.router.navigate(['/my-account']);
-
-      // Redirect or perform further actions
-    } else {
-      alert('Login failed!');
-    }
+    const loginData=
+    { username : this.signInForm.value.username,
+     password :this.signInForm.value.password};
+    // if (this.userService.login(username, password)) {
+    //   alert('Login successful!');
+    
+      this.http.post('http://your-backend-url/login', loginData)
+      .subscribe(
+        (response: any) => {
+          // Handle success (e.g., store JWT token and redirect)
+          localStorage.setItem('token', response.token);
+          this.router.navigate(['/my-account']);
+        },
+        (error) => {
+          // Handle error
+          alert('Login failed!');        }
+      );
+    //  } else {
+    //   alert('Login failed!');
+    // }
    }
 }
